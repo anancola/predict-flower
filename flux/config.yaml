@@ -12,4 +12,4 @@ spec:
     spec:
       chart: ./helm-chart
   values:
-    repository: "acrann.azurecr.io/python-api/predict-flower"
+    image.repository: "acrann.azurecr.io/python-api/predict-flower"
