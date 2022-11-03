@@ -1,9 +1,8 @@
 {{- if .Values.ingress.enabled -}}
-  {{- $fullName := include "helm-chart.fullname" . -}}
   apiVersion: networking.k8s.io/v1
   kind: Ingress
   metadata:
-    name: {{ $fullName }}
+    name: {{ .Values.nameOverride }}
     namespace: {{ .Values.namespace }}
   spec:
     ingressClassName: nginx
@@ -14,7 +13,7 @@
           pathType: Prefix
           backend:
             service:
-              name: {{ $fullName }}
+              name: {{ .Values.nameOverride }}
               port:
                 number: {{ .Values.ingress.port }}
 {{- end }}

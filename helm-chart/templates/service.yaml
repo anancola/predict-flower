@@ -1,11 +1,10 @@
-{{- $fullName := include "helm-chart.fullname" . -}}
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ $fullName }}
+  name: {{ .Values.nameOverride }}
   namespace: {{ .Values.namespace }}
 spec:
   ports:
   - port: {{ .Values.service.port }}
   selector:
-    app: {{ $fullName }}
+    app: {{ .Values.nameOverride }}
