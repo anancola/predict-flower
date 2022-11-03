@@ -1,23 +1,24 @@
+{{- $fullName := include "helm-chart.fullname" . -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: {{ .Values.nameOverride }}
-  name: {{ .Values.nameOverride }}
+    app: {{ $fullName }}
+  name: {{ $fullName }}
   namespace: {{ .Values.namespace }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Values.nameOverride }}
+      app: {{ $fullName }}
   template:
     metadata:
       labels:
-        app: {{ .Values.nameOverride }}
+        app: {{ $fullName }}
     spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-        name: {{ .Values.nameOverride }}
+        name: {{ $fullName }}
         # IfNotPresent, Never
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
