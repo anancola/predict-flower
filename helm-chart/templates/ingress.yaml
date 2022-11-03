@@ -1,0 +1,20 @@
+{{- if .Values.ingress.enabled -}}
+  {{- $fullName := include "helm-chart.fullname" . -}}
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: {{ $fullName }}
+    namespace: {{ .Values.namespace }}
+  spec:
+    ingressClassName: nginx
+    rules:
+    - http:
+        paths:
+        - path: /predict-flower
+          pathType: Prefix
+          backend:
+            service:
+              name: {{ $fullName }}
+              port:
+                number: {{ .Values.ingress.port }}
+{{- end }}
