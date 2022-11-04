@@ -9,7 +9,7 @@ namespace: "default"
 replicaCount: 1
 
 image:
-  repository: "acrann.azurecr.io/python-api/predict-flower"
+  repository: "<your acr name>/python-api/predict-flower"
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1.1"
   # IfNotPresent, Never, Always
