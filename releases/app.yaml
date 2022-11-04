@@ -6,10 +6,6 @@ metadata:
 spec:
   releaseName: predict-flower
   chart:
-    git: https://github.com/anancola/predict-flower.git
-    ref: master
-    path: helm-charts
-  chart:
     spec:
       chart: predict-flower
       sourceRef:
