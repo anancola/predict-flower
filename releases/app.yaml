@@ -3,6 +3,8 @@ kind: HelmRelease
 metadata:
   name: predict-flower
   namespace: default
+  annotations:
+    clusterconfig.azure.com/use-managed-source: "true"
 spec:
   releaseName: predict-flower
   chart:
