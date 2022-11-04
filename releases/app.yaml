@@ -9,5 +9,13 @@ spec:
     git: https://github.com/anancola/predict-flower.git
     ref: master
     path: helm-charts
+  chart:
+    spec:
+      chart: predict-flower
+      sourceRef:
+        kind: HelmRepository
+        name: predict-flower
+        namespace: default
+  interval: 5m
   values:
     repository: "acrann.azurecr.io/python-api/predict-flower"
