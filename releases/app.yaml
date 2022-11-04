@@ -12,7 +12,7 @@ spec:
       chart: predict-flower
       sourceRef:
         kind: Kustomization
-        name: releases
+        name: kustomization-releases
         namespace: default
   interval: 5m
   values:
