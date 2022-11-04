@@ -6,14 +6,10 @@ metadata:
   annotations:
     clusterconfig.azure.com/use-managed-source: "true"
 spec:
-  releaseName: predict-flower
+  releaseName: predict-flower  
+  interval: 1m
   chart:
     spec:
-      chart: predict-flower
-      sourceRef:
-        kind: Kustomization
-        name: kustomization-releases
-        namespace: default
-  interval: 5m
+      chart: ./helm-chart
   values:
     repository: "acrann.azurecr.io/python-api/predict-flower"
