@@ -11,8 +11,8 @@ spec:
     spec:
       chart: predict-flower
       sourceRef:
-        kind: HelmRepository
-        name: predict-flower
+        kind: Kustomization
+        name: releases
         namespace: default
   interval: 5m
   values:
