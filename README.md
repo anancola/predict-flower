@@ -45,7 +45,7 @@ sepal_width: 3
 petal_length: 1
 petal_width: 0.2
 ```
-![image](./media/image2.png)
+![image](./media/image3.png)
 
 # Reference
 [1] https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli  
