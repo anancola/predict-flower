@@ -48,6 +48,7 @@ petal_width: 0.2
 ![image](./media/image3.png)
 
 # Reference
-[1] https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli  
-[2] https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2  
-[3] https://github.com/Azure/gitops-flux2-kustomize-helm-mt  
+[1] https://www.geeksforgeeks.org/deploying-ml-models-as-api-using-fastapi/  
+[2] https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli  
+[3] https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2  
+[4] https://github.com/Azure/gitops-flux2-kustomize-helm-mt  
