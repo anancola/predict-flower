@@ -23,6 +23,12 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         imagePullSecrets:
           - name: {{ .Values.image.pullSecretName }}
+        
+        {{- if .Values.gpu.enabled -}}
+        resources:
+          limits:
+            nvidia.com/gpu: {{ .Values.gpu.count }}
+        {{ end }}
         ports:
         - containerPort: 8000
       restartPolicy: Always
