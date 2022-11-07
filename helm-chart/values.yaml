@@ -16,7 +16,7 @@ image:
   pullPolicy: IfNotPresent
   
 imagePullSecrets:
-  name: acr-secret-docker
+  name: regcred
 
 service:
   type: NodePort
