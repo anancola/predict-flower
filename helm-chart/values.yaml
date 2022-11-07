@@ -18,6 +18,11 @@ image:
 imagePullSecrets:
   name: regcred
 
+resources:
+  gpu:
+    enabled: true
+    count: 1
+    
 service:
   type: NodePort
   port: 8000
