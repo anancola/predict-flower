@@ -19,7 +19,7 @@ imagePullSecrets:
   name: acr-secret
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 8000
 
 ingress:
