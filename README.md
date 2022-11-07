@@ -22,7 +22,9 @@ $ docker push <acr-login-server>/python-api/predict-flower
 ```
 
 # Pull images from an Azure container registry to a Kubernetes cluster
-[Reference](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes?source=recommendations#create-a-service-principal)
+Follow the [reference](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes?source=recommendations#create-a-service-principal) to grant AcrPull privilege to an Azure Service Principal and pull images from an Azure container registry to a Kubernetes cluster.
+After the setup, you will have an secret name of 'acr-secret' and use it to pull containers from the ACR.
+
 
 # Use Azure-Arc to deploy helm chart
 Follow the instruction to connect on-premise Kubernetes cluster to an Azure-Arc and set GitOps.  
