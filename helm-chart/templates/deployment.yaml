@@ -21,8 +21,8 @@ spec:
         name: {{ $fullName }}
         # IfNotPresent, Never
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        imagePullSecrets:
-          - name: {{ .Values.image.pullSecretName }}
         ports:
         - containerPort: 8000
+      imagePullSecrets:
+      - name: {{ .Values.imagePullSecrets.name }}
       restartPolicy: Always
