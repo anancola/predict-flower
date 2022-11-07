@@ -21,6 +21,8 @@ $ docker build -t <acr-login-server>/python-api/predict-flower:<version> .
 $ docker push <acr-login-server>/python-api/predict-flower
 ```
 
+# Pull images from an Azure container registry to a Kubernetes cluster
+[Reference](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes?source=recommendations#create-a-service-principal)
 
 # Use Azure-Arc to deploy helm chart
 Follow the instruction to connect on-premise Kubernetes cluster to an Azure-Arc and set GitOps.  
@@ -50,5 +52,6 @@ petal_width: 0.2
 # Reference
 [1] https://www.geeksforgeeks.org/deploying-ml-models-as-api-using-fastapi/  
 [2] https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli  
-[3] https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2  
-[4] https://github.com/Azure/gitops-flux2-kustomize-helm-mt  
+[3] https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes?source=recommendations  
+[4] https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2  
+[5] https://github.com/Azure/gitops-flux2-kustomize-helm-mt  
