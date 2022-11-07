@@ -14,7 +14,9 @@ image:
   tag: "1.1"
   # IfNotPresent, Never, Always
   pullPolicy: IfNotPresent
-  pullSecretName: acr-secret
+  
+imagePullSecrets:
+  name: acr-secret
 
 service:
   type: ClusterIP
