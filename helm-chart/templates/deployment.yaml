@@ -21,6 +21,8 @@ spec:
         name: {{ $fullName }}
         # IfNotPresent, Never
         imagePullPolicy: {{ .Values.image.pullPolicy }}
+        imagePullSecrets:
+          - name: acr-secret
         ports:
         - containerPort: 8000
       restartPolicy: Always
