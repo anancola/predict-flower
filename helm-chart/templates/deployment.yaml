@@ -24,10 +24,10 @@ spec:
         imagePullSecrets:
           - name: {{ .Values.image.pullSecretName }}
         
-        {{- if .Values.gpu.enabled -}}
+        {{- if .Values.image.gpu.enabled -}}
         resources:
           limits:
-            nvidia.com/gpu: {{ .Values.gpu.count }}
+            nvidia.com/gpu: {{ .Values.image.gpu.count }}
         {{ end }}
         ports:
         - containerPort: 8000
