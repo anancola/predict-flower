@@ -16,6 +16,11 @@ image:
   pullPolicy: IfNotPresent
   pullSecretName: acr-secret
 
+resources:
+  gpu:
+    enabled: true
+    count: 1
+    
 service:
   type: ClusterIP
   port: 8000
