@@ -5,6 +5,7 @@ metadata:
   name: {{ $fullName }}
   namespace: {{ .Values.namespace }}
 spec:
+  type: {{ .Values.service.type }}
   ports:
   - port: {{ .Values.service.port }}
   selector:
