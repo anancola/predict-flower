@@ -19,6 +19,9 @@ spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         name: {{ $fullName }}
+        resources:
+          limits:
+            nvidia.com/gpu: 1
         # IfNotPresent, Never
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
